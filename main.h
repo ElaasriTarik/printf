@@ -26,5 +26,6 @@ int print_hex(va_list arg);
 int print_hex_upper(va_list arg);
 int print_str(va_list arg);
 int print_add(va_list arg);
+int search(char n);
 
 #endif

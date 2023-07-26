@@ -14,22 +14,3 @@ int print_add(va_list arg)
 	x += print_add(p);
 	return (x);
 }
-
-/**
- * search - printf special char in hex
- * @n: Input
- *
- * Return: counter
- */
-
-int search(char n)
-{
-	if (n < ' ' || n >= '~')
-	{
-		return (-1);
-	}
-	else
-	{
-		return (0);
-	}
-}
