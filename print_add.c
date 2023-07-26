@@ -29,5 +29,7 @@ int search(char n)
 		return (-1);
 	}
 	else
+	{
 		return (0);
+	}
 }
