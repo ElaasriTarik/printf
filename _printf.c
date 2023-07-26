@@ -1,20 +1,23 @@
 #include "main.h"
 
 /**
- * _printf - Prints to the stdout according to given format
+ * _printf -> Prints a formatted string
+ *
  * @format: Input String Format
- * Return: Number chararters Printed
+ *
+ * Return: Number chars Printed
  */
 
 int _printf(const char *format, ...)
 {
-	int cc = 0;
+	int count = 0;
 	va_list list;
 
-	va_start(list, format);
-	if ((format == NULL) || (format[0] == '%' && !format[1]))
+va_start(list, format);
+if (!format || (format[0] == '%' && !format[1]))
+	{
 		return (-1);
-
+	}
 	if (format[0] == '%' && format[1] == ' ' && !format[2])
 	{
 		return (-1);
@@ -24,15 +27,15 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			cc += switche(list, *format);
+			count += switche(list, *format);
 		}
 		else
 		{
 			_putchar(*format);
-			cc++;
+			count++;
 		}
 		format++;
 	}
 	va_end(list);
-	return (cc);
+	return (count);
 }
