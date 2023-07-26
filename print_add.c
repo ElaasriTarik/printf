@@ -11,7 +11,7 @@ int print_add(va_list arg)
 {
 	int x = 0;
 	void *p = va_arg(arg, void*);
-	x += print_address(p);
+	x += print_add(p);
 	return (x);
 }
 

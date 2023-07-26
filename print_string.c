@@ -1,6 +1,24 @@
 #include "main.h"
 
 /**
+ * search - printf special char in hex
+ * @n: Input
+ * Return: counter
+ */
+
+int search(char n)
+{
+	if (n < ' ' || n >= '~')
+	{
+		return (-1);
+	}
+	else
+	{
+		return (0);
+	}
+}
+
+/**
  * print_str - printf special char in hex
  * @arg: Argument
  * Return: counter

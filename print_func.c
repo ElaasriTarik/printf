@@ -15,7 +15,6 @@ int switche(va_list list, char format)
         {'i', print_integer},
         {'d', print_integer},
 		{'s', print_string},
-        {'u', print_u_integer},
         {'o', print_octal},
 		{'x', print_hex},
         {'X', print_hex_upper},
@@ -27,8 +26,9 @@ int switche(va_list list, char format)
 
 	i = 0;
 	while ((format != fun[i].str) && (fun[i].str != '\0'))
+	{
 		i++;
-
+	}
 	if (fun[i].str != '\0')
 		cc += fun[i].print(list);
 
