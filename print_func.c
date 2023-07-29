@@ -9,8 +9,8 @@
 
 int switche(va_list list, char format)
 {
-	int cc = 0, i = 0;
-	string fun[] = {
+int cc = 0, i = 0;
+string fun[] = {
 		{'c', print_chare},
         {'i', print_integer},
         {'d', print_integer},
@@ -22,7 +22,7 @@ int switche(va_list list, char format)
 		{'S', print_str},
         {'p', print_add},
         {'\0', NULL}
-	};
+};
 
 	i = 0;
 	while ((format != fun[i].str) && (fun[i].str != '\0'))
@@ -37,12 +37,12 @@ int switche(va_list list, char format)
 		_putchar('%');
 		cc++;
 	}
+	
 	else
 	{
 		_putchar('%');
 		_putchar(format);
 		cc += 2;
 	}
-
-	return (cc);
+return (cc);
 }
