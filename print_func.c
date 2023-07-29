@@ -15,10 +15,7 @@ string fun[] = {
         {'i', print_integer},
         {'d', print_integer},
 		{'s', print_string},
-        {'o', print_octal},
-		{'x', print_hex},
         {'X', print_hex_upper},
-        {'b', print_binary},
 		{'S', print_str},
         {'p', print_add},
         {'\0', NULL}
@@ -37,7 +34,7 @@ string fun[] = {
 		_putchar('%');
 		cc++;
 	}
-	
+
 	else
 	{
 		_putchar('%');

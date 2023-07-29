@@ -9,8 +9,8 @@
 
 typedef struct forma_cara
 {
-	char str;
-	int (*print)(va_list arg);
+char str;
+int (*print)(va_list arg);
 } string;
 int _putchar(char c);
 int print_chare(va_list arg);
